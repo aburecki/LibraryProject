@@ -12,6 +12,10 @@ class Book {
         this.isbn = isbn;
     }
 
+    Book(Book book) {
+        this(book.title, book.author, book.publisher, book.numPages, book.yearPublish, book.isbn);
+    }
+
     public void showInfo() {
         System.out.println("Tytuł książki: " + title);
         System.out.println("Autor książki: " + author );
