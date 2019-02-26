@@ -7,13 +7,17 @@ public class Book {
     private long isbn;
 
     public Book(String title, String author, String publisher, int numPages, int yearPublish, long isbn) {
+        this(title, author, publisher, numPages,yearPublish);
+        this.isbn = isbn;
+    }
+    public Book(String title, String author, String publisher, int numPages, int yearPublish) {
         this.title =  title;
         this.author = author ;
         this.publisher = publisher;
         this.numPages = numPages;
         this.yearPublish = yearPublish;
-        this.isbn = isbn;
     }
+
 
     public Book(Book book)
     {
@@ -75,5 +79,6 @@ public class Book {
         System.out.println("Ilość stron: " + numPages);
         System.out.println("ISBN: " + isbn );
         System.out.println("Rok wydania: " + yearPublish);
+        System.out.println("------------------------------------------ ");
     }
 }
