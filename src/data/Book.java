@@ -77,7 +77,7 @@ public class Book {
         System.out.println("Autor książki: " + author );
         System.out.println("Wydawca: " + publisher);
         System.out.println("Ilość stron: " + numPages);
-        System.out.println("ISBN: " + isbn );
+        if(isbn != 0) { System.out.println("ISBN: " + isbn); }
         System.out.println("Rok wydania: " + yearPublish);
         System.out.println("------------------------------------------ ");
     }

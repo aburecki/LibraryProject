@@ -1,19 +1,22 @@
 package app;
+
 import data.Book;
 
 public class Library {
     public static void main(String[] args) {
 
         ProgramInfo info = new ProgramInfo();
+        Book[] books = new Book[1000];
 
-        Book book1 = new Book(
+
+        books[0] = new Book(
                 "W pustyni i w puszczy",
                 "Henryk Sienkiewicz",
                 "Greg",
                 296, 2010,
                 9_788_373_271_890L);
 
-        Book book2 = new Book(
+        books[1] = new Book(
                 "Java. Efektywne programowanie. Wydanie II",
                 "Joshua Bloch",
                 "Greg",
@@ -21,8 +24,8 @@ public class Library {
                 9_788_324_620_845L);
 
 
-        book1.showInfo();
-        book2.showInfo();
+        books[0].showInfo();
+        books[1].showInfo();
 
     }
 }
