@@ -1,9 +1,9 @@
 package model;
 
-public class Book {
+public class Book extends Publication {
 
-    private String title, author, publisher;
-    private int numPages, yearPublish;
+    private String author;
+    private int numPages;
     private long isbn;
 
     public Book(String title, String author, String publisher, int numPages, int yearPublish, long isbn) {
@@ -11,25 +11,17 @@ public class Book {
         this.isbn = isbn;
     }
     public Book(String title, String author, String publisher, int numPages, int yearPublish) {
-        this.title =  title;
+        setTitle(title);
         this.author = author ;
-        this.publisher = publisher;
+        setPublisher(publisher);
         this.numPages = numPages;
-        this.yearPublish = yearPublish;
+        setYear(yearPublish);
     }
 
 
     public Book(Book book)
     {
-        this(book.getTitle(), book.getAuthor(), book.getPublisher(), book.getNumPages(), book.getYearPublish(), book.getIsbn());
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+        this(book.getTitle(), book.getAuthor(), book.getPublisher(), book.getNumPages(), book.getYear(), book.getIsbn());
     }
 
     public String getAuthor() {
@@ -40,13 +32,6 @@ public class Book {
         this.author = author;
     }
 
-    public String getPublisher() {
-        return publisher;
-    }
-
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
-    }
 
     public int getNumPages() {
         return numPages;
@@ -56,13 +41,6 @@ public class Book {
         this.numPages = numPages;
     }
 
-    public int getYearPublish() {
-        return yearPublish;
-    }
-
-    public void setYearPublish(int yearPublish) {
-        this.yearPublish = yearPublish;
-    }
 
     public long getIsbn() {
         return isbn;
@@ -73,12 +51,12 @@ public class Book {
     }
 
     public void showInfo() {
-        System.out.println("Tytuł książki: " + title);
+        System.out.println("Tytuł książki: " + getTitle());
         System.out.println("Autor książki: " + author );
-        System.out.println("Wydawca: " + publisher);
+        System.out.println("Wydawca: " + getPublisher());
         System.out.println("Ilość stron: " + numPages);
         if(isbn != 0) { System.out.println("ISBN: " + isbn); }
-        System.out.println("Rok wydania: " + yearPublish);
+        System.out.println("Rok wydania: " + getYear());
         System.out.println("------------------------------------------ ");
     }
 }
