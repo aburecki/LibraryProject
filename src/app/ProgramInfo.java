@@ -9,5 +9,6 @@ public class ProgramInfo {
             System.out.println("Witaj w systemie zarządzania bibioteką");
             System.out.println("Autor aplikacji: Artur Burecki");
             System.out.println("---------------------------------------");
+
         }
 }

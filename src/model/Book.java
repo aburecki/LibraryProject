@@ -15,7 +15,6 @@ public class Book extends Publication {
         super(title,publisher, yearPublish);
         this.author = author ;
         this.numPages = numPages;
-
     }
 
 
